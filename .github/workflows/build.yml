@@ -16,6 +16,11 @@ jobs:
 
       - uses: android-actions/setup-android@v4
 
+      # ✅ Добавляем шаг, который устанавливает Gradle 8.5
+      - uses: gradle/actions/setup-gradle@v3
+        with:
+          gradle-version: 8.5
+
       - name: Build APK
         run: gradle assembleDebug --no-daemon
 
